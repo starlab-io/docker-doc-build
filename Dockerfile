@@ -1,5 +1,5 @@
-FROM starlabio/ubuntu-base:1.1
-MAINTAINER Doug Goldstein <doug@starlab.io>
+FROM starlabio/ubuntu-base:1.5
+MAINTAINER Star Lab <maintainers@starlab.io>
 
 RUN apt-get update && \
     apt-get --quiet --yes install \
