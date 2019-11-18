@@ -3,7 +3,13 @@ MAINTAINER Star Lab <maintainers@starlab.io>
 
 RUN apt-get update && \
     apt-get --quiet --yes install \
-        graphviz pandoc texlive-xetex xsltproc mscgen librsvg2-bin && \
-        apt-get autoremove -y && \
-        apt-get clean && \
-        rm -rf /var/lib/apt/lists* /tmp/* /var/tmp/*
+        graphviz \
+        librsvg2-bin \
+        mscgen \
+        pandoc \
+        texlive-xetex \
+        xsltproc \
+    && \
+    apt-get autoremove -y && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists* /tmp/* /var/tmp/*
