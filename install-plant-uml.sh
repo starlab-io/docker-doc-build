@@ -1,8 +1,10 @@
 #!/bin/sh
 
 #
-# This script installs PlantUML on the local system and makes it
-# invocable using the convenience script.
+# This script installs PlantUML on the local system, as well as
+# installing a convenience script that allows invoking PlantUML
+# using the command "plantuml" (instead of manually passing the
+# PlantUML JAR file to Java).
 #
 
 INSTALL_DIRECTORY=/opt/plantuml
