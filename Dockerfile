@@ -1,4 +1,4 @@
-FROM starlabio/ubuntu-base:1.5
+FROM starlabio/ubuntu-base:1.7
 MAINTAINER Star Lab <maintainers@starlab.io>
 
 ARG plant_uml_directory=/opt/plantuml
@@ -32,7 +32,9 @@ RUN apt-get update && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists* /tmp/* /var/tmp/*
 
-RUN pip install \
+RUN update-alternatives --install  /usr/bin/python python /usr/bin/python3 1000
+
+RUN pip3 install \
         argparse \
         pyaml \
         requests \
