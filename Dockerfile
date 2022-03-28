@@ -21,6 +21,7 @@ RUN apt-get update && \
     apt-get --quiet --yes install \
         default-jre-headless \
         graphviz \
+        latexmk \
         librsvg2-bin \
         mscgen \
         pandoc \
@@ -35,8 +36,9 @@ RUN apt-get update && \
 RUN update-alternatives --install  /usr/bin/python python /usr/bin/python3 1000
 
 RUN pip3 install \
-        argparse \
         pyaml \
+        myst-parser \
         requests \
+        sphinx \
         texttable \
         yamlordereddictloader
